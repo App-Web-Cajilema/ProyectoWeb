@@ -1,0 +1,49 @@
+.no-padding {
+  padding: 0;
+}
+:host{
+  padding: 0;
+}
+.usuario-data {
+  padding-right: 1ex;
+}
+
+
+.navbar {
+  background: #000011;
+}
+
+.nav-item {
+  font-size: 2.2ex;
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+}
+.nav-link:hover {
+  color: #77a5ff !important;
+}
+
+.nav-link:hover > img {
+  border: #77a5ff solid 0.5ex;
+  border-radius: 1ex;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.dropdown-item{
+  background: white;
+  color: black;
+}
+.dropdown-item:hover {
+  background: #d4d4d4;
+}
+.menu-user {
+  font-weight: bold;
+}
+.menu-user:hover {
+  color: #00B5AD;
+}

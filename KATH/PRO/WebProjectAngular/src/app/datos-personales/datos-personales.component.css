@@ -1,0 +1,21 @@
+.no-display {
+  display: none;
+}
+.img-clickable {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 575px) {
+  .margin-left {
+    margin-left: 1ex;
+    margin-right: 1ex;
+  }
+}
+
+.padding-title {
+  margin-bottom: 2ex;
+}
+
+#eye:hover {
+  cursor: pointer;
+}
