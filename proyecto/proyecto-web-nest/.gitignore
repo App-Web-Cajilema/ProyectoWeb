@@ -1,0 +1,9 @@
+/node_modules
+/.idea
+package.json
+package-lock.json
+/dist
+src/app.module.ts
+src/app.module.ts
+src/assets/usuario/camilita.jpeg
+src/assets/usuario/juanito.jpeg

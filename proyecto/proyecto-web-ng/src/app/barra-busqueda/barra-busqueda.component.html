@@ -1,0 +1,31 @@
+      <div class="dropdown">
+        <input (click)="mostrarEsconderBarra()" (keyup)="onKey($event)" id="busqueda" name="busqueda" class="form-control" type="text" placeholder="Search" [value]="textoABuscar" aria-label="Recipient" style="width: 477px">
+        <div id="dropDownSearchContent" class="dropdown-menu" style="width: 477px" >
+          <ul *ngIf="libros?.length !== 0; else sinResultados" class="list-group list-group-flush">
+            <li *ngFor="let libro of libros"
+                (click)="fillSearchBar($event, libro.nombre)"
+                class="mano
+                list-group-item
+                  list-group-item-action
+                  d-flex
+                  justify-content-between
+                  align-items-center"
+            >
+              <a>{{libro.nombre}}</a>
+              <span class="badge badge-secondary badge-pill">Año: {{libro.anio}}</span>
+            </li>
+          </ul>
+
+          <ng-template #sinResultados class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-center align-items-center">
+              <b>No se hallaron resultados</b>
+            </li>
+          </ng-template>
+        </div>
+      </div>
+      <div class="input-group-append">
+        <app-speech-text (textoEmit)="ubicarTexto($event)"></app-speech-text>
+      </div>
+      <div class="input-group-append">
+        <button (click)="emitirTexto()" class="btn btn-outline-secondary" type="button">Buscar</button>
+      </div>

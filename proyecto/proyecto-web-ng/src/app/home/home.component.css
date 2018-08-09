@@ -1,0 +1,41 @@
+.enlace-izq {
+  margin-right: 1ex;
+}
+.enlace-der {
+  margin-left: 1ex;
+}
+.anchor-white {
+  color: white;
+}
+
+@media only screen and (max-width: 575px) {
+  .enlace-izq {
+    margin-right: 0;
+  }
+  .enlace-der {
+    margin-left: 0;
+  }
+}
+
+
+* {
+  padding-top: 0.5ex;
+  color: white;
+}
+
+
+
+.btn {
+  font-weight: bold;
+}
+h1 {
+  color: white;
+}
+body {
+  height: 100%;
+  background: black;
+}
+.container-fluid{
+  height: 100%;
+  background: black;
+}

@@ -1,0 +1,56 @@
+<div class="col-12">
+      <div class="row">
+        <div class="card" style="width: 100%">
+          <div class="card-header text-center">Detalle</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4 text-center" style="padding-left: 115px">
+                <div class="card" style="width: 220px">
+                  <img class="card-img-top" [src]="libro?.imagenUrl" [alt]="libro?.nombre" style="width: 220px; height: 280px" href="#">
+                  <div class="card-body deshabilitarPointer">
+                    <p class="card-text"><app-rating [puntuacion]="puntuacionLibro"></app-rating></p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-4" style="padding-top: 50px">
+                <div class="card" style="width: 100%">
+                  <div class="card-header text-center bg-dark" style="font-weight: bold; color: white">{{libro?.nombre}}</div>
+                  <div class="card-body">
+                    <div class="row justify-content-center">
+                      <div class="col-7 text-center">
+                        <p class="card-text">{{autor?.nombre}} {{autor?.apellido}}</p>
+                        <p class="card-text">{{genero?.nombre}}</p>
+                        <p class="card-text">{{libro?.descripcion}}</p>
+                        <p class="card-text">{{editorial?.nombre}}</p>
+                        <p class="card-text">{{libro?.numeroPaginas}} páginas</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4 text-center" style="padding-top: 50px">
+                <button (click)="agregarAlCarrito(libro)" class="btn btn-primary">{{textoBotonAgregarCarrito}}</button>
+                <div style="padding-top: 10px">
+                  <h4>Por favor, califique este título:</h4>
+                  <app-rating (puntuacionUsuarioEmit)="guardarPuntuacionEmitida($event);"></app-rating>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card" style="width: 100%">
+          <div class="card-header">Comentarios</div>
+          <div class="card-body">
+            <app-comentarios (textoComentarioEmit)="guardarComentarioEmitido($event);" [comentarios]="comentarios" [libro]="libro" [erroAlComentar]="error"></app-comentarios>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
